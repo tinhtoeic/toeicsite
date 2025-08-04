@@ -260,14 +260,14 @@ footer {
   max-width: 400px;
 }
 
-/* Styles for practice page layout */
-.practice-layout {
+/* Styles for listening practice page layout (2/3 Form - 1/3 Audio) */
+.listening-practice-layout {
   display: flex;
   gap: 20px;
   margin-top: 20px;
 }
 
-.form-section {
+.listening-practice-layout .form-section {
   flex: 2;
   background-color: white;
   padding: 20px;
@@ -275,13 +275,13 @@ footer {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.form-section iframe {
+.listening-practice-layout .form-section iframe {
   width: 100%;
   height: 600px;
   border: none;
 }
 
-.audio-section {
+.listening-practice-layout .audio-section {
   flex: 1;
   background-color: #ffe1f0;
   padding: 20px;
@@ -289,27 +289,62 @@ footer {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.audio-list {
+.listening-practice-layout .audio-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.audio-list li {
+.listening-practice-layout .audio-list li {
   margin-bottom: 15px;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.audio-list li span {
+.listening-practice-layout .audio-list li span {
   font-size: 1em;
   color: #007bff;
   font-weight: bold;
 }
 
-.audio-list li audio {
+.listening-practice-layout .audio-list li audio {
   width: 100%;
+}
+
+/* Styles for reading practice page layout (2/3 PDF - 1/3 Form) */
+.reading-practice-layout {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.reading-practice-layout .pdf-section {
+  flex: 2;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reading-practice-layout .pdf-section iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
+}
+
+.reading-practice-layout .form-section {
+  flex: 1;
+  background-color: #ffe1f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reading-practice-layout .form-section iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
 }
 
 /* Media queries for mobile devices */
@@ -353,17 +388,22 @@ footer {
     max-width: 100%;
   }
 
-  .practice-layout {
+  .listening-practice-layout,
+  .reading-practice-layout {
     flex-direction: column;
   }
 
-  .form-section,
-  .audio-section {
+  .listening-practice-layout .form-section,
+  .listening-practice-layout .audio-section,
+  .reading-practice-layout .pdf-section,
+  .reading-practice-layout .form-section {
     flex: none;
     width: 100%;
   }
 
-  .form-section iframe {
+  .listening-practice-layout .form-section iframe,
+  .reading-practice-layout .pdf-section iframe,
+  .reading-practice-layout .form-section iframe {
     height: 400px;
   }
 }

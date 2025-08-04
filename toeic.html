@@ -7,19 +7,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
-      <div class="container">
-        <h1 class="logo">Diệu Thanh English</h1>
-        <nav>
-          <ul>
-            <li><a href="index.html">Trang Chủ</a></li>
-            <li><a href="toeic.html" class="active">Học TOEIC</a></li>
-            <li><a href="ielts.html">Học IELTS</a></li>
-            <li><a href="index.html#contact">Liên Hệ</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <header id="header"></header>
 
     <section class="hero">
       <div class="container">
@@ -45,30 +33,7 @@
             <div class="part-list">
               <div class="part">
                 <h4 class="part-toggle">Part 1: Photographs</h4>
-                <div class="practice-list">
-                  <ul>
-                    <li><a href="part1_practice1.html">Đề 1</a></li>
-                    <li><a href="#">Đề 2</a></li>
-                    <li><a href="#">Đề 3</a></li>
-                    <li><a href="#">Đề 4</a></li>
-                    <li><a href="#">Đề 5</a></li>
-                    <li><a href="#">Đề 6</a></li>
-                    <li><a href="#">Đề 7</a></li>
-                    <li><a href="#">Đề 8</a></li>
-                    <li><a href="#">Đề 9</a></li>
-                    <li><a href="#">Đề 10</a></li>
-                    <li><a href="#">Đề 11</a></li>
-                    <li><a href="#">Đề 12</a></li>
-                    <li><a href="#">Đề 13</a></li>
-                    <li><a href="#">Đề 14</a></li>
-                    <li><a href="#">Đề 15</a></li>
-                    <li><a href="#">Đề 16</a></li>
-                    <li><a href="#">Đề 17</a></li>
-                    <li><a href="#">Đề 18</a></li>
-                    <li><a href="#">Đề 19</a></li>
-                    <li><a href="#">Đề 20</a></li>
-                  </ul>
-                </div>
+                <div class="practice-list"></div>
               </div>
               <div class="part">
                 <h4 class="part-toggle">Part 2: Question-Response</h4>
@@ -162,36 +127,7 @@
             <div class="part-list">
               <div class="part">
                 <h4 class="part-toggle">Part 5: Incomplete Sentences</h4>
-                <div class="practice-list">
-                  <ul>
-                    <li>
-                      <a
-                        href="https://docs.google.com/forms/d/e/your-google-form-id/viewform"
-                        target="_blank"
-                        >Đề 1</a
-                      >
-                    </li>
-                    <li><a href="#">Đề 2</a></li>
-                    <li><a href="#">Đề 3</a></li>
-                    <li><a href="#">Đề 4</a></li>
-                    <li><a href="#">Đề 5</a></li>
-                    <li><a href="#">Đề 6</a></li>
-                    <li><a href="#">Đề 7</a></li>
-                    <li><a href="#">Đề 8</a></li>
-                    <li><a href="#">Đề 9</a></li>
-                    <li><a href="#">Đề 10</a></li>
-                    <li><a href="#">Đề 11</a></li>
-                    <li><a href="#">Đề 12</a></li>
-                    <li><a href="#">Đề 13</a></li>
-                    <li><a href="#">Đề 14</a></li>
-                    <li><a href="#">Đề 15</a></li>
-                    <li><a href="#">Đề 16</a></li>
-                    <li><a href="#">Đề 17</a></li>
-                    <li><a href="#">Đề 18</a></li>
-                    <li><a href="#">Đề 19</a></li>
-                    <li><a href="#">Đề 20</a></li>
-                  </ul>
-                </div>
+                <div class="practice-list"></div>
               </div>
               <div class="part">
                 <h4 class="part-toggle">Part 6: Text Completion</h4>
@@ -253,44 +189,8 @@
       </div>
     </section>
 
-    <footer>
-      <div class="container">
-        <p>
-          &copy; 2025 Diệu Thanh English. Tất cả quyền tự hào thuộc về chúng
-          tôi!
-        </p>
-      </div>
-    </footer>
+    <footer id="footer"></footer>
 
-    <script>
-      document.querySelectorAll(".part-toggle").forEach((toggle) => {
-        toggle.addEventListener("click", () => {
-          const practiceList = toggle.nextElementSibling;
-          const isActive = practiceList.classList.contains("active");
-
-          document.querySelectorAll(".practice-list").forEach((list) => {
-            list.classList.remove("active");
-          });
-
-          if (!isActive) {
-            practiceList.classList.add("active");
-          }
-        });
-      });
-
-      function playSelectedAudio() {
-        const select = document.getElementById("audioSelect");
-        const audioPlayer = document.getElementById("audioPlayer");
-        const selectedAudio = select.value;
-
-        if (selectedAudio) {
-          audioPlayer.src = selectedAudio;
-          audioPlayer.play();
-        } else {
-          audioPlayer.pause();
-          audioPlayer.src = "";
-        }
-      }
-    </script>
+    <script src="scripts.js"></script>
   </body>
 </html>
