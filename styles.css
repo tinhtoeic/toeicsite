@@ -1,0 +1,394 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  color: #ffe1f0;
+}
+
+.hero {
+  background: linear-gradient(135deg, #007bff, #ffe1f0);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  margin-top: 80px;
+}
+
+.hero h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background-color: #ffe1f0;
+  color: #007bff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.courses,
+.skills,
+.audio-player,
+.practice-container {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.courses h2,
+.skills h2,
+.audio-player h2,
+.practice-container h2 {
+  font-size: 2em;
+  margin-bottom: 40px;
+  color: #007bff;
+}
+
+.course-grid,
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.course-card,
+.skill-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.course-card:hover,
+.skill-card:hover {
+  transform: translateY(-5px);
+}
+
+.course-card h3,
+.skill-card h3 {
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.about {
+  background-color: #ffe1f0;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+.contact {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+.contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+  padding: 10px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.contact textarea {
+  height: 150px;
+}
+
+footer {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Styles for TOEIC page */
+.part-list {
+  margin-top: 20px;
+}
+
+.part {
+  margin-bottom: 20px;
+}
+
+.part-toggle {
+  color: #007bff;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 1.2em;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.part-toggle:hover {
+  background-color: #ffe1f0;
+}
+
+.practice-list {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  background-color: #ffe1f0;
+  padding: 0 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out,
+    padding 0.3s ease-out;
+}
+
+.practice-list.active {
+  max-height: 300px;
+  opacity: 1;
+  padding: 15px;
+}
+
+.practice-list ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+}
+
+.practice-list ul li a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+.practice-list ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Styles for audio player section */
+.audio-player select {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  font-size: 1em;
+  margin-bottom: 20px;
+  background-color: white;
+  color: #333;
+}
+
+.audio-player audio {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Styles for practice page layout */
+.practice-layout {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.form-section {
+  flex: 2;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-section iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
+}
+
+.audio-section {
+  flex: 1;
+  background-color: #ffe1f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.audio-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.audio-list li {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.audio-list li span {
+  font-size: 1em;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.audio-list li audio {
+  width: 100%;
+}
+
+/* Media queries for mobile devices */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .hero h2 {
+    font-size: 2em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+
+  .skill-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .part-toggle {
+    font-size: 1.1em;
+    padding: 8px;
+  }
+
+  .practice-list ul {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 8px;
+  }
+
+  .practice-list ul li a {
+    font-size: 0.8em;
+  }
+
+  .practice-list.active {
+    max-height: 500px;
+  }
+
+  .audio-player select,
+  .audio-player audio {
+    max-width: 100%;
+  }
+
+  .practice-layout {
+    flex-direction: column;
+  }
+
+  .form-section,
+  .audio-section {
+    flex: none;
+    width: 100%;
+  }
+
+  .form-section iframe {
+    height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.5em;
+  }
+
+  nav ul li {
+    margin-left: 10px;
+  }
+
+  nav ul li a {
+    font-size: 0.9em;
+  }
+
+  .hero {
+    padding: 80px 10px;
+  }
+
+  .courses h2,
+  .skills h2,
+  .audio-player h2,
+  .practice-container h2 {
+    font-size: 1.5em;
+  }
+}
